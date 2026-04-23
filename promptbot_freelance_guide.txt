@@ -1,0 +1,61 @@
+GUÍA COMPLETA PROMPTBOT FREELANCE (GITHUB + VERCEL + IA)
+
+1. Qué es PromptBot
+Sistema freelance que genera respuestas inteligentes para WhatsApp usando IA (OpenAI/Claude).
+
+2. Estructura del proyecto
+promptbot/
+- public/
+  - index.html
+  - style.css
+  - app.js
+  - prompts.json
+- api/
+  - generate.js
+- vercel.json
+- package.json
+- .gitignore
+- .env.example
+- README.md
+
+3. Qué subir a GitHub
+SÍ:
+- index.html
+- style.css
+- app.js
+- api/generate.js
+- vercel.json
+- README.md
+- prompts.json (sin datos sensibles)
+- .env.example
+
+NO:
+- .env real
+- API keys
+- tokens
+- datos de clientes
+
+4. IA (OpenAI ejemplo)
+Usar /api/generate.js con fetch a OpenAI API y clave en Vercel env.
+
+5. Vercel config
+vercel.json con builds @vercel/node y routes /api/*
+
+6. Frontend
+app.js conecta a /api/generate vía fetch POST
+
+7. Variables de entorno
+OPENAI_API_KEY en Vercel (NO en GitHub)
+
+8. Flujo correcto
+GitHub -> Vercel deploy -> IA API -> frontend
+
+9. Modelo freelance
+50€ básico
+100€ medio
+200€ pro
+
+10. Errores comunes
+- subir solo HTML
+- exponer keys
+- no usar API routes
