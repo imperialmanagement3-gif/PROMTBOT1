@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptBot - Generador de Respuestas WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 PromptBot</h1>
+            <p>Genera respuestas profesionales para tu negocio en WhatsApp</p>
+        </header>
+
+        <main>
+            <!-- Selector de tipo de negocio -->
+            <section class="card">
+                <h2>1️⃣ Tipo de Negocio</h2>
+                <select id="businessType">
+                    <option value="">Selecciona tu negocio...</option>
+                    <option value="restaurante">🍕 Restaurante</option>
+                    <option value="tienda">🛒 Tienda Online</option>
+                    <option value="servicios">🔧 Servicios Profesionales</option>
+                    <option value="salud">🏥 Salud y Bienestar</option>
+                    <option value="educacion">📚 Educación</option>
+                    <option value="inmobiliaria">🏠 Inmobiliaria</option>
+                </select>
+            </section>
+
+            <!-- Información del negocio -->
+            <section class="card">
+                <h2>2️⃣ Datos de tu Negocio</h2>
+                <input type="text" id="businessName" placeholder="Nombre del negocio">
+                <input type="text" id="businessHours" placeholder="Horario (ej: Lun-Vie 9am-6pm)">
+                <input type="text" id="businessPhone" placeholder="Teléfono de contacto">
+                <input type="text" id="businessLocation" placeholder="Ubicación o ciudad">
+            </section>
+
+            <!-- Tipo de mensaje -->
+            <section class="card">
+                <h2>3️⃣ Tipo de Respuesta</h2>
+                <div class="response-types">
+                    <button class="type-btn" data-type="saludo">👋 Saludo</button>
+                    <button class="type-btn" data-type="precios">💰 Precios</button>
+                    <button class="type-btn" data-type="horarios">🕐 Horarios</button>
+                    <button class="type-btn" data-type="ubicacion">📍 Ubicación</button>
+                    <button class="type-btn" data-type="pedido">📦 Pedidos</button>
+                    <button class="type-btn" data-type="agradecimiento">🙏 Agradecimiento</button>
+                    <button class="type-btn" data-type="ausente">😴 Fuera de Horario</button>
+                    <button class="type-btn" data-type="promocion">🎉 Promoción</button>
+                </div>
+            </section>
+
+            <!-- Generar respuesta -->
+            <section class="card">
+                <h2>4️⃣ Tu Respuesta Generada</h2>
+                <div id="responseOutput" class="response-box">
+                    <p class="placeholder">Selecciona un tipo de respuesta para generar...</p>
+                </div>
+                <div class="actions">
+                    <button id="copyBtn" class="btn-primary" disabled>📋 Copiar Respuesta</button>
+                    <button id="regenerateBtn" class="btn-secondary" disabled>🔄 Otra Variación</button>
+                </div>
+            </section>
+
+            <!-- Historial -->
+            <section class="card">
+                <h2>📝 Historial de Respuestas</h2>
+                <div id="history" class="history-list">
+                    <p class="placeholder">Las respuestas generadas aparecerán aquí...</p>
+                </div>
+                <button id="exportBtn" class="btn-secondary">📥 Exportar Todo</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Creado con ❤️ para freelancers | <a href="[github.com](https://github.com/tu-usuario/promptbot)">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+promptbot/
+├── index.html
+├── style.css
+├── app.js
+├── prompts.json
+├── README.md
+└── LICENSE
